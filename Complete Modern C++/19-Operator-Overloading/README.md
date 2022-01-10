@@ -73,5 +73,13 @@ They then need to be defined globally.
 }
 ```
 
-## The smart pointer basic
-
+## General Rules
+- Associativity, precedence & parity (operand count) does not change
+- Operator functions should be non-static
+  - except for new & delete (very special alocators :P)
+- One argument should be user defined type
+- Global overload if first operand is primitive type
+- Not all operators can be overloaded
+  - . ?: .* sizeof
+- Cannot define new operators
+- Overloaded for conventional behaviour only
